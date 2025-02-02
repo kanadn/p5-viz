@@ -80,7 +80,7 @@ class Particle {
     this.pos = createVector(rad * cos(angle), random(-cylHeight / 2 * 0.8, cylHeight / 2 * 0.8), rad * sin(angle));
     // Give it a random velocity.
     this.vel = p5.Vector.random3D();
-    this.vel.mult(random(5, 10));
+    this.vel.mult(random(3, 6));
     // Store a trail of positions (limit trail length)
     this.trail = [];
     this.maxTrail = 50;
