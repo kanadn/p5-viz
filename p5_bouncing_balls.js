@@ -10,7 +10,7 @@ const cylHeight = 400;
 // We use the distance from the center to a cylinder corner.
 const sphereRadius = Math.sqrt(cylRadius * cylRadius + (cylHeight / 2) ** 2) + 20;
 
-let rotAngle = 0;         // Rotation angle for the container
+let rotAngle = 1;         // Rotation angle for the container
 let zoomFactor = 1;       // Global zoom factor
 
 function setup() {
@@ -29,7 +29,7 @@ function draw() {
   background(0);
 
   // Update global rotation and zoom values.
-  rotAngle += 0.005; // slow rotation
+  rotAngle += 0.015; // slow rotation
   zoomFactor = 1 + 0.3 * sin(frameCount * 0.005); // oscillate zoom
 
   // Apply global transformations: zoom and rotate the scene.
@@ -52,7 +52,7 @@ function draw() {
   push();
   noFill();
   stroke(255, 100);
-  strokeWeight(2);
+  strokeWeight(1);
   // p5.js draws cylinder centered at origin.
   // Use a slight rotation so that the open sides are visible.
   cylinder(cylRadius, cylHeight);
@@ -62,7 +62,7 @@ function draw() {
   push();
   noFill();
   stroke(255, 100);
-  strokeWeight(2);
+  strokeWeight(1);
   sphere(sphereRadius);
   pop();
 
